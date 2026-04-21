@@ -25,7 +25,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; overflow-x: hidden; }
 
-  /* ── TOP BAR ── */
+  /* -- TOP BAR -- */
   .topbar {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
@@ -42,10 +42,10 @@
   .topbar-title { font-size: 13px; color: var(--muted); }
   .status-pill { font-family: var(--mono); font-size: 11px; padding: 4px 10px; border-radius: 20px; background: rgba(0,212,170,0.1); color: var(--accent); border: 1px solid rgba(0,212,170,0.25); }
 
-  /* ── LAYOUT ── */
+  /* -- LAYOUT -- */
   .main { padding: 32px; max-width: 1400px; margin: 0 auto; }
 
-  /* ── KPI ROW ── */
+  /* -- KPI ROW -- */
   .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 28px; }
   .kpi { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; }
   .kpi::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
@@ -62,17 +62,17 @@
   .kpi.danger .kpi-value { color: var(--danger); }
   .kpi-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
 
-  /* ── GRID ── */
+  /* -- GRID -- */
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
   .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
 
-  /* ── PANEL ── */
+  /* -- PANEL -- */
   .panel { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
   .panel-head { padding: 14px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
   .panel-title { font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
   .panel-body { padding: 20px; }
 
-  /* ── UPLOAD / CONTROL ── */
+  /* -- UPLOAD / CONTROL -- */
   .controls { display: flex; gap: 10px; align-items: center; }
   .btn { font-family: var(--mono); font-size: 12px; font-weight: 500; padding: 8px 16px; border-radius: 6px; border: none; cursor: pointer; transition: all 0.15s; letter-spacing: 0.04em; }
   .btn-primary { background: var(--accent); color: #000; }
@@ -83,7 +83,7 @@
   .btn-danger:hover { background: rgba(232,68,90,0.25); }
   .btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
-  /* ── PROGRESS BAR ── */
+  /* -- PROGRESS BAR -- */
   .progress-wrap { margin: 16px 0; }
   .progress-label { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-bottom: 6px; display: flex; justify-content: space-between; }
   .progress-track { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
@@ -92,7 +92,7 @@
   .fill-warn  { background: linear-gradient(90deg, #f5a623, #fbbf24); }
   .fill-blue  { background: linear-gradient(90deg, #4f8ef7, #818cf8); }
 
-  /* ── TABLE ── */
+  /* -- TABLE -- */
   .tbl-wrap { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; font-size: 12px; }
   thead th { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); background: var(--surface); white-space: nowrap; }
@@ -105,7 +105,7 @@
   .badge-unalloc { background: rgba(232,68,90,0.12); color: var(--danger); border: 1px solid rgba(232,68,90,0.3); }
   .badge-pending { background: rgba(107,114,128,0.12); color: var(--muted); border: 1px solid var(--border); }
 
-  /* ── BAR CHART ── */
+  /* -- BAR CHART -- */
   .bar-chart { display: flex; flex-direction: column; gap: 12px; }
   .bar-row { display: flex; align-items: center; gap: 10px; }
   .bar-label { font-size: 11px; color: var(--muted); min-width: 90px; text-align: right; }
@@ -117,7 +117,7 @@
   .bar-fill.danger{ background: linear-gradient(90deg,#e8445a,#fb7185); }
   .bar-val { font-family: var(--mono); font-size: 11px; min-width: 48px; color: var(--text); }
 
-  /* ── LOG ── */
+  /* -- LOG -- */
   .log-box { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; height: 200px; overflow-y: auto; font-family: var(--mono); font-size: 11px; line-height: 1.8; }
   .log-line { margin: 0; }
   .log-line.ok   { color: var(--accent); }
@@ -126,7 +126,7 @@
   .log-line.info { color: var(--accent2); }
   .log-line.dim  { color: var(--muted); }
 
-  /* ── DONUT ── */
+  /* -- DONUT -- */
   .donut-wrap { display: flex; align-items: center; gap: 24px; }
   svg.donut { transform: rotate(-90deg); }
   .donut-legend { display: flex; flex-direction: column; gap: 10px; }
@@ -134,20 +134,20 @@
   .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
   .legend-val { font-family: var(--mono); font-weight: 600; margin-left: auto; padding-left: 16px; }
 
-  /* ── FILTER BAR ── */
+  /* -- FILTER BAR -- */
   .filter-bar { display: flex; gap: 8px; padding: 14px 20px; border-bottom: 1px solid var(--border); background: var(--surface); flex-wrap: wrap; }
   .filter-btn { font-family: var(--mono); font-size: 11px; padding: 5px 12px; border-radius: 4px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.12s; }
   .filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(0,212,170,0.08); }
   .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-  /* ── METRIC DIFF ── */
+  /* -- METRIC DIFF -- */
   .diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border-radius: 8px; overflow: hidden; }
   .diff-cell { background: var(--surface); padding: 16px 18px; }
   .diff-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; }
   .diff-val { font-family: var(--mono); font-size: 20px; font-weight: 600; }
   .diff-caption { font-size: 11px; color: var(--muted); margin-top: 3px; }
 
-  /* ── ANIMATIONS ── */
+  /* -- ANIMATIONS -- */
   @keyframes fadeUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
   @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
   @keyframes scan { 0% { transform:translateY(0); } 100% { transform:translateY(200px); } }
@@ -175,7 +175,7 @@
     <span class="tag">SAP FI/SD</span>
     <span class="tag">Excel VBA</span>
     <span class="tag">200K+ Records</span>
-    <span class="status-pill" id="statusPill">● READY</span>
+    <span class="status-pill" id="statusPill">&#x25CF; READY</span>
   </div>
 </div>
 
@@ -276,7 +276,7 @@
       </div>
       <div class="panel-body" style="padding:0;">
         <div class="log-box" id="logBox">
-          <p class="log-line dim">// AR Reconciliation Tool — Initialised</p>
+          <p class="log-line dim">// AR Reconciliation Tool -- Initialised</p>
           <p class="log-line dim">// Awaiting run command...</p>
         </div>
       </div>
@@ -293,9 +293,9 @@
             <circle id="dUnalloc" cx="50" cy="50" r="38" fill="none" stroke="#e8445a" stroke-width="14" stroke-dasharray="0 239" stroke-dashoffset="0" style="transition:stroke-dasharray 1s ease 0.6s"/>
           </svg>
           <div class="donut-legend">
-            <div class="legend-row"><div class="legend-dot" style="background:var(--accent)"></div><span style="font-size:12px;">Auto-matched</span><span class="legend-val" id="lgAuto" style="color:var(--accent);">—</span></div>
-            <div class="legend-row"><div class="legend-dot" style="background:var(--warn)"></div><span style="font-size:12px;">Partial / Review</span><span class="legend-val" id="lgPartial" style="color:var(--warn);">—</span></div>
-            <div class="legend-row"><div class="legend-dot" style="background:var(--danger)"></div><span style="font-size:12px;">Unallocated</span><span class="legend-val" id="lgUnalloc" style="color:var(--danger);">—</span></div>
+            <div class="legend-row"><div class="legend-dot" style="background:var(--accent)"></div><span style="font-size:12px;">Auto-matched</span><span class="legend-val" id="lgAuto" style="color:var(--accent);">--</span></div>
+            <div class="legend-row"><div class="legend-dot" style="background:var(--warn)"></div><span style="font-size:12px;">Partial / Review</span><span class="legend-val" id="lgPartial" style="color:var(--warn);">--</span></div>
+            <div class="legend-row"><div class="legend-dot" style="background:var(--danger)"></div><span style="font-size:12px;">Unallocated</span><span class="legend-val" id="lgUnalloc" style="color:var(--danger);">--</span></div>
           </div>
         </div>
       </div>
@@ -321,20 +321,20 @@
 
     <!-- Aging buckets -->
     <div class="panel">
-      <div class="panel-head"><span class="panel-title">Unallocated Payments — Aging Buckets</span></div>
+      <div class="panel-head"><span class="panel-title">Unallocated Payments -- Aging Buckets</span></div>
       <div class="panel-body">
         <div class="bar-chart">
-          <div class="bar-row"><span class="bar-label">0–30 days</span><div class="bar-track"><div class="bar-fill green" id="a1" style="width:0%">0</div></div><span class="bar-val" id="av1">—</span></div>
-          <div class="bar-row"><span class="bar-label">31–60 days</span><div class="bar-track"><div class="bar-fill warn" id="a2" style="width:0%">0</div></div><span class="bar-val" id="av2">—</span></div>
-          <div class="bar-row"><span class="bar-label">61–90 days</span><div class="bar-track"><div class="bar-fill warn" id="a3" style="width:0%">0</div></div><span class="bar-val" id="av3">—</span></div>
-          <div class="bar-row"><span class="bar-label">&gt;90 days</span><div class="bar-track"><div class="bar-fill danger" id="a4" style="width:0%">0</div></div><span class="bar-val" id="av4">—</span></div>
+          <div class="bar-row"><span class="bar-label">0-30 days</span><div class="bar-track"><div class="bar-fill green" id="a1" style="width:0%">0</div></div><span class="bar-val" id="av1">--</span></div>
+          <div class="bar-row"><span class="bar-label">31-60 days</span><div class="bar-track"><div class="bar-fill warn" id="a2" style="width:0%">0</div></div><span class="bar-val" id="av2">--</span></div>
+          <div class="bar-row"><span class="bar-label">61-90 days</span><div class="bar-track"><div class="bar-fill warn" id="a3" style="width:0%">0</div></div><span class="bar-val" id="av3">--</span></div>
+          <div class="bar-row"><span class="bar-label">&gt;90 days</span><div class="bar-track"><div class="bar-fill danger" id="a4" style="width:0%">0</div></div><span class="bar-val" id="av4">--</span></div>
         </div>
         <div style="margin-top:20px;padding:12px 14px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
           <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:8px;">DSO Impact</div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;">
             <div><div style="font-family:var(--mono);font-size:22px;color:var(--danger);" id="dsoBefore">42 days</div><div style="font-size:11px;color:var(--muted);">Before automation</div></div>
-            <div style="font-size:20px;color:var(--muted);">→</div>
-            <div><div style="font-family:var(--mono);font-size:22px;color:var(--accent);" id="dsoAfter">—</div><div style="font-size:11px;color:var(--muted);">After automation</div></div>
+            <div style="font-size:20px;color:var(--muted);">&rarr;</div>
+            <div><div style="font-family:var(--mono);font-size:22px;color:var(--accent);" id="dsoAfter">--</div><div style="font-size:11px;color:var(--muted);">After automation</div></div>
           </div>
         </div>
       </div>
@@ -344,7 +344,7 @@
   <!-- ROW 3: TRANSACTION TABLE -->
   <div class="panel section-gap">
     <div class="panel-head">
-      <span class="panel-title">Transaction Ledger — Sample View</span>
+      <span class="panel-title">Transaction Ledger -- Sample View</span>
       <span style="font-size:11px;color:var(--muted);">Showing 15 of 200,000 records</span>
     </div>
     <div class="filter-bar">
@@ -379,7 +379,7 @@
 </div><!-- /main -->
 
 <script>
-// ── DATA ────────────────────────────────────────────────────────────────────
+// -- DATA --------------------------------------------------------------------
 const customers = [
   {name:"Siemens AG",         seg:"Enterprise"},
   {name:"Bosch GmbH",         seg:"Enterprise"},
@@ -393,7 +393,7 @@ const customers = [
   {name:"Interco NL Branch",  seg:"Intercompany"},
   {name:"Aldi Einkauf",       seg:"Retail"},
   {name:"SAP SE",             seg:"Enterprise"},
-  {name:"Stadtwerk Köln",     seg:"Government"},
+  {name:"Stadtwerk K&ouml;ln",     seg:"Government"},
   {name:"CloudSoft GmbH",     seg:"SME"},
   {name:"Interco FR Branch",  seg:"Intercompany"},
 ];
@@ -411,13 +411,13 @@ function randBankRef() {
 }
 
 function formatAmt(n) {
-  return "€" + n.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});
+  return "&euro;" + n.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});
 }
 
 function initTable() {
   tableData = customers.map((c,i) => {
     const inv = baseAmts[i];
-    return { ref:"INV-2025-"+String(1000+i), cust:c.name, seg:c.seg, inv, pay:inv, var:0, due:"2025-03-"+String(10+i%15).padStart(2,'0'), paid:"—", bank:"—", status:"PENDING" };
+    return { ref:"INV-2025-"+String(1000+i), cust:c.name, seg:c.seg, inv, pay:inv, var:0, due:"2025-03-"+String(10+i%15).padStart(2,'0'), paid:"--", bank:"--", status:"PENDING" };
   });
   renderTable();
 }
@@ -432,7 +432,7 @@ function renderTable() {
       <td><span style="font-size:10px;color:var(--muted)">${row.seg}</span></td>
       <td>${formatAmt(row.inv)}</td>
       <td>${row.pay === row.inv ? formatAmt(row.pay) : '<span style="color:var(--warn)">'+formatAmt(row.pay)+'</span>'}</td>
-      <td style="color:${Math.abs(row.var)>0?'var(--warn)':'var(--muted)'}">${row.var===0?'—':formatAmt(row.var)}</td>
+      <td style="color:${Math.abs(row.var)>0?'var(--warn)':'var(--muted)'}">${row.var===0?'--':formatAmt(row.var)}</td>
       <td style="color:var(--muted)">${row.due}</td>
       <td style="color:var(--muted)">${row.paid}</td>
       <td style="color:var(--muted)">${row.bank}</td>
@@ -449,7 +449,7 @@ function filterTable(status, btn) {
   renderTable();
 }
 
-// ── RECONCILIATION ENGINE ───────────────────────────────────────────────────
+// -- RECONCILIATION ENGINE ---------------------------------------------------
 let logCount = 0;
 function log(msg, cls='dim') {
   const box = document.getElementById('logBox');
@@ -503,7 +503,7 @@ async function runReconciliation() {
   if(ran) return;
   ran = true;
   document.getElementById('runBtn').disabled = true;
-  document.getElementById('statusPill').textContent = '● RUNNING';
+  document.getElementById('statusPill').textContent = '&#x25CF; RUNNING';
   document.getElementById('statusPill').style.background = 'rgba(245,166,35,0.15)';
   document.getElementById('statusPill').style.color = 'var(--warn)';
   document.getElementById('statusPill').style.borderColor = 'rgba(245,166,35,0.35)';
@@ -513,38 +513,38 @@ async function runReconciliation() {
   await sleep(300);
   log(`Loading ${TOTAL.toLocaleString()} records from SAP FI/SD export`, "dim");
   await sleep(400);
-  log("Parsing bank statement — HSBC / Deutsche Bank feeds", "dim");
+  log("Parsing bank statement -- HSBC / Deutsche Bank feeds", "dim");
   await sleep(300);
   log("Strategy: Fuzzy match + 3-day date window + 1% tolerance", "ok");
   await sleep(200);
 
-  // Phase 1 — exact
+  // Phase 1 -- exact
   log("Phase 1: Exact reference + amount matching...", "info");
   setProgress('progBar','progPct', 15, "Phase 1: Exact matching...");
   await sleep(600);
-  log("  → 142,800 records matched on exact reference", "ok");
+  log("  &rarr; 142,800 records matched on exact reference", "ok");
   setProgress('progBar','progPct', 35, "Phase 2: Fuzzy amount matching...");
   await sleep(500);
 
-  // Phase 2 — fuzzy
-  log("Phase 2: Fuzzy amount matching (±1% tolerance)...", "info");
+  // Phase 2 -- fuzzy
+  log("Phase 2: Fuzzy amount matching (&plusmn;1% tolerance)...", "info");
   await sleep(500);
-  log("  → 32,000 additional records matched with variance within tolerance", "ok");
+  log("  &rarr; 32,000 additional records matched with variance within tolerance", "ok");
   setProgress('progBar','progPct', 60, "Phase 3: Bulk payment splitting...");
   await sleep(400);
 
-  // Phase 3 — bulk split
+  // Phase 3 -- bulk split
   log("Phase 3: Bulk payment splitting for consolidated remittances...", "info");
   await sleep(600);
-  log("  → 9,200 bulk payments split across 18,400 invoices", "ok");
+  log("  &rarr; 9,200 bulk payments split across 18,400 invoices", "ok");
   setProgress('progBar','progPct', 80, "Phase 4: Flagging exceptions...");
   await sleep(400);
 
-  // Phase 4 — exceptions
+  // Phase 4 -- exceptions
   log("Phase 4: Identifying partial matches and unallocated items...", "info");
   await sleep(500);
-  log("  → 6,000 items flagged for analyst review (partial amount)", "warn");
-  log("  → 2,000 items remain unallocated — dunning list generated", "err");
+  log("  &rarr; 6,000 items flagged for analyst review (partial amount)", "warn");
+  log("  &rarr; 2,000 items remain unallocated -- dunning list generated", "err");
   setProgress('progBar','progPct', 100, "Reconciliation complete.");
   await sleep(300);
 
@@ -603,21 +603,21 @@ async function runReconciliation() {
   // Update table
   const finalStatuses = ['MATCHED','MATCHED','MATCHED','MATCHED','MATCHED','MATCHED','MATCHED','MATCHED','MATCHED','MATCHED','PARTIAL','PARTIAL','PARTIAL','UNALLOCATED','UNALLOCATED'];
   const partialAmts   = [null,null,null,null,null,null,null,null,null,null,0.97,0.94,1.02,0.85,0.91];
-  const paidDates = ['2025-03-11','2025-03-12','2025-03-13','2025-03-14','2025-03-15','2025-03-16','2025-03-17','2025-03-18','2025-03-19','2025-03-20','2025-03-21','2025-03-22','2025-03-23','—','—'];
+  const paidDates = ['2025-03-11','2025-03-12','2025-03-13','2025-03-14','2025-03-15','2025-03-16','2025-03-17','2025-03-18','2025-03-19','2025-03-20','2025-03-21','2025-03-22','2025-03-23','--','--'];
   tableData.forEach((row,i) => {
     row.status = finalStatuses[i];
-    row.bank   = finalStatuses[i] !== 'UNALLOCATED' ? randBankRef() : '—';
+    row.bank   = finalStatuses[i] !== 'UNALLOCATED' ? randBankRef() : '--';
     row.paid   = paidDates[i];
     if(partialAmts[i]) { row.pay = Math.round(row.inv * partialAmts[i]); row.var = row.pay - row.inv; }
   });
   renderTable();
 
   // Status pill
-  document.getElementById('statusPill').textContent = '● COMPLETE';
+  document.getElementById('statusPill').textContent = '&#x25CF; COMPLETE';
   document.getElementById('statusPill').style.background = 'rgba(0,212,170,0.1)';
   document.getElementById('statusPill').style.color = 'var(--accent)';
   document.getElementById('statusPill').style.borderColor = 'rgba(0,212,170,0.25)';
-  log("━━━ Reconciliation complete. 87% auto-matched. 1% unallocated. ━━━", "ok");
+  log("--- Reconciliation complete. 87% auto-matched. 1% unallocated. ---", "ok");
 }
 
 function resetAll() {
@@ -635,13 +635,13 @@ function resetAll() {
   document.getElementById('progLabel').textContent = 'Awaiting run...';
   ['b1','b2','b3','b4','b5'].forEach(id => { document.getElementById(id).style.width='0%'; document.getElementById(id).textContent='0%'; });
   ['a1','a2','a3','a4'].forEach(id => { document.getElementById(id).style.width='0%'; document.getElementById(id).textContent='0'; });
-  ['av1','av2','av3','av4'].forEach(id => document.getElementById(id).textContent='—');
-  document.getElementById('dsoAfter').textContent = '—';
-  document.getElementById('lgAuto').textContent = '—';
-  document.getElementById('lgPartial').textContent = '—';
-  document.getElementById('lgUnalloc').textContent = '—';
+  ['av1','av2','av3','av4'].forEach(id => document.getElementById(id).textContent='--');
+  document.getElementById('dsoAfter').textContent = '--';
+  document.getElementById('lgAuto').textContent = '--';
+  document.getElementById('lgPartial').textContent = '--';
+  document.getElementById('lgUnalloc').textContent = '--';
   updateDonut(0,0,0);
-  document.getElementById('statusPill').textContent = '● READY';
+  document.getElementById('statusPill').textContent = '&#x25CF; READY';
   document.getElementById('statusPill').style.background = 'rgba(0,212,170,0.1)';
   document.getElementById('statusPill').style.color = 'var(--accent)';
   document.getElementById('statusPill').style.borderColor = 'rgba(0,212,170,0.25)';
@@ -651,7 +651,7 @@ function resetAll() {
   initTable();
 }
 
-// ── INIT ────────────────────────────────────────────────────────────────────
+// -- INIT --------------------------------------------------------------------
 initTable();
 </script>
 </body>
